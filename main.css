@@ -1,0 +1,106 @@
+.text-container > span {
+  color: #333;
+  display: block;
+  text-align: center;
+}
+#name {
+  margin-top: 10rem;
+  font-size: 5rem;
+}
+#msg {
+  margin-top: 35rem;
+}
+#info {
+  margin-top: 0.5rem;
+}  
+.url{
+  position: relative;
+  padding: 0.3em;
+}
+.url:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 7px;
+  background: repeating-linear-gradient(-45deg, skyblue, skyblue 2px, white 2px, white 4px);
+}
+.wrapper {
+  margin-top: 20rem;
+  height: 50rem;
+  position: relative;
+}
+@media screen and (min-width:1050px) {
+  .wrapper {
+    margin-top: 7.5rem!important;
+    height: 5rem!important;
+  }
+  #name {
+    margin-top: 5rem!important;
+  }
+  #msg {
+    margin-top: 2rem!important;
+  }
+  #info {
+    margin-top: 0.25rem!important
+  }
+
+}
+.balls-container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+}
+.ball {
+  width: 50%;
+  height: 20px;
+  position: absolute;
+  top: calc(50% - 10px);
+  transform-origin: 100% 0%;
+  left: 0;
+}
+.ball::before {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #333;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.ball-1::before { animation: balls-animation 0.5s linear 0s infinite; }
+.ball-2         { transform: rotate(45deg); }
+.ball-2::before { animation: balls-animation 0.5s linear -0.05s infinite; }
+.ball-3         { transform: rotate(90deg); }
+.ball-3::before { animation: balls-animation 0.5s linear -0.1s infinite; }
+.ball-4         { transform: rotate(135deg); }
+.ball-4::before { animation: balls-animation 0.5s linear -0.15s infinite; }
+.ball-5         { transform: rotate(180deg); }
+.ball-5::before { animation: balls-animation 0.5s linear -0.2s infinite; }
+.ball-6         { transform: rotate(225deg); }
+.ball-6::before { animation: balls-animation 0.5s linear -0.25s infinite; }
+.ball-7         { transform: rotate(270deg); }
+.ball-7::before { animation: balls-animation 0.5s linear -0.3s infinite; }
+.ball-8         { transform: rotate(315deg); }
+.ball-8::before { animation: balls-animation 0.5s linear -0.35s infinite; }
+@keyframes balls-animation {
+  0% {
+    width: 20px;
+    height: 20px;
+    opacity: 1;
+  }
+  100% {
+    width: 6px;
+    height: 6px;
+    opacity: .2;
+    margin-left: 7px;
+  }
+} 
